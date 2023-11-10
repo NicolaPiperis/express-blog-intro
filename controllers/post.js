@@ -11,7 +11,7 @@ function index(req, res) {
         const tagsHtml = post.tags.map(tag => `<span>${tag}</span>`).join(', ');
           html.push(`<li>
             <h3>${post.title}</h3>
-            <img src="" alt="" style="width: 100px">
+            <img src="/imgs/${post.image}" alt="" style="width: 100px">
             <p>${post.content}</p>
             <p>${tagsHtml}</p>
           </li>`);
