@@ -3,7 +3,9 @@ const posts = require("../db/post.json");
 function index(req, res) {
     res.format({
       html: () => {
-        const html = [`<h1>Lista dei post</h1>`];
+        const html = [];
+
+        html.push("<h1>Lista dei post</h1>");
   
         html.push("<ul>");
   
