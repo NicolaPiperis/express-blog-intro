@@ -8,11 +8,12 @@ function index(req, res) {
         html.push("<ul>");
   
         for (const post of posts) {
+        const tagsHtml = post.tags.map(tag => `<span>${tag}</span>`).join(', ');
           html.push(`<li>
             <h3>${post.title}</h3>
             <img src="" alt="" style="width: 100px">
             <p>${post.content}</p>
-            <p>${post.tag}</p>
+            <p>${tagsHtml}</p>
           </li>`);
         }
   
